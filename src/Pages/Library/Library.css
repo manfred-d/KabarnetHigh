@@ -1,0 +1,136 @@
+.library{
+    padding: 180px 0 0;
+    background: linear-gradient(to bottom left, rgba(210, 255, 210, 0.907),rgba(208, 200, 120, 0.902));
+    position: relative;
+    z-index: 10;
+}
+.library .library_page{
+    padding: 20px 0;
+    width: 100%;
+    height: 100%;
+}
+.library .library_page .library_title{
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+.library .library_page .library_title h4{
+    font-weight: 2.5rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 1.2px;
+}
+.library .library_page .library_body{
+    padding: 0 15px;
+}
+.library .library_page .library_body p{
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--secondary-color);
+    line-height: 22px;
+    letter-spacing: 2px;
+    word-wrap: break-word;
+    word-break: keep-all;
+    word-spacing: 1.3px;
+}
+.library .library_img{
+    min-height: 100%;
+    width: 100%;
+}
+.library .library_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.librarian{
+    z-index: 1;
+}
+/* 0pening hours */
+.row.opening_hours{
+    background-color:beige;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.8);
+    /* flex-direction: row; */
+    justify-content:space-evenly;
+    padding: 25px 0;
+    gap: 10px;
+    margin: 25px 0;
+    z-index: 100;
+}
+.opening_hours table thead tr{
+    border-bottom: 1px solid black;
+}
+.opening_hours table thead td{
+    font-size: 18px;
+    color: var(--secondary-color);
+    padding: 10px 0 5px;
+}
+.opening_hours table tbody td{
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--secondary-color);
+}
+
+/* librarian info */
+
+.librarian_img{
+    height: 100%;
+}
+.librarian_img img{
+    width: 90%;
+    height: 100%;
+    border-radius: 100px 0 100px 0;
+}
+.librarian_img .librarian_name{
+    padding: 20px 15px;
+    text-align: center;
+    width: 90%;
+}
+.librarian_img .librarian_name label{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-transform: capitalize;
+    letter-spacing: 1.1px;
+}
+.librarian_img .librarian_name p{
+    font-size: 17px;
+    color: var(--secondary-color);
+    font-weight: 400;
+    letter-spacing: 1.2px;
+
+}
+.librarian_info{
+    padding: 25px 10px;
+}
+.librarian_info .librarian_body{
+    padding: 0 20px;
+    position: relative;
+}
+.librarian_info .librarian_body p{
+    text-align: start;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    word-wrap: break-word;
+    word-break: keep-all;
+    word-spacing: 1.2px;
+    letter-spacing: 1.1px;
+    line-height: 28px;
+    color: var(--secondary-color);
+    z-index: 1;
+}
+.librarian_info .librarian_body .fa-quote-left{
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    font-size: 50px;
+    color: rgba(0,0,0,0.1);
+}
+.librarian_info .librarian_body .fa-quote-right{
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    font-size: 50px;
+    color: rgba(0,0,0,0.2);
+}

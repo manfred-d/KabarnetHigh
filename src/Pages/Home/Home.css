@@ -1,0 +1,246 @@
+
+
+/* ===Home section */
+section .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+section .swiper-container .swiper-wrapper {
+    /* transition-duration: 1s !important; */
+    transition: all 1s ease-in-out;
+}
+section .swiper-container .swiper-wrapper .splide__progress{
+    height:5px;
+    width: 100%;
+}
+section .swiper-container .swiper-wrapper .splide__progress .splide__progress__bar{
+    background-color: var(--yellow) !important;
+    height: 100%;
+    animation-duration: 1s;
+}
+
+section .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    cursor: pointer;
+    height: 100vh;
+    width: 100vw;
+}
+
+section .swiper-slide h2 {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    font-size: 2.3rem;
+    padding: 10px 0;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+section .swiper-slide .history {
+    color: var(--secondary-color);
+    text-transform: capitalize;
+}
+
+section .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ======New Hostel Samoei === */
+.new-hostel {
+    background: linear-gradient(to bottom right, var(--main-color), var(--primary-color));
+}
+
+.new-hostel .samoei-hostel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    margin: 30px 0;
+    gap: 10px;
+}
+
+.new-hostel .samoei-hostel .hostel-img {
+    width: 100%;
+    max-height: 500px;
+    margin: 0 10px;
+    padding: 1rem;
+    background: transparent;
+}
+
+.new-hostel .samoei-hostel .hostel-img img {
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    border-radius: .5rem;
+}
+
+.new-hostel .samoei-hostel .hostel-info {
+    width: 100%;
+    margin: 0 10px;
+    padding: 0 10px;
+    text-align: start;
+
+}
+
+.new-hostel .samoei-hostel .hostel-info h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.new-hostel .samoei-hostel .hostel-info h4::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 5rem;
+    height: 5px;
+    background-color: var(--yellow);
+}
+
+.new-hostel .samoei-hostel .hostel-info p {
+    color: var(--secondary-color);
+    line-height: 1.5rem;
+    text-indent: 20px;
+}
+
+/*  ==== more about khs ==== */
+.more {
+    background: linear-gradient(to bottom left, var(--primary-color), var(--main-color));
+    opacity: 0.8;
+}
+
+.more .more-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    text-align: start;
+    padding: 10px 0;
+    margin: 4rem 0 0;
+}
+
+.more .more-about .cards {
+    margin: 5px 0px;
+    padding: 0 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.more .more-about .cards .card-header,
+.more .more-about .cards .card-footer {
+    width: 100%;
+    background: none;
+    border: 0;
+}
+
+.more .more-about .cards .card-header h5 {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--secondary-color);
+    line-height: 1.2rem;
+    position: relative;
+}
+
+.more .more-about .cards .card-info {
+    padding: 10px 0;
+    width: 100%;
+}
+
+.more .more-about .cards .card-info p {
+    color: var(--secondary-color);
+    font-size: 15px;
+    line-height: 1.3rem;
+    text-indent: 10px;
+    opacity: 0.8;
+}
+
+/* message from principal */
+.principals{
+    padding: 50px 0;
+    background-color: rgb(218, 255, 155);
+}
+.card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+@media screen and (max-width:768px) {
+    .card{
+        flex-direction: column;
+    }
+}
+.card .card_img{
+    padding: 0;
+    width: 100%;
+    height: 60vh;
+}
+.card .card_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.card .card_body{
+    padding: 25px ;
+    font-size: 18px;
+    color: var(--secondary-color);
+    word-wrap: break-word;
+    line-height: 1.5rem;
+    text-align:start;
+    border-top: 0.5rem solid var(--yellow);
+}
+.card .card_body p{
+    font-size: 18px;
+    color: var(--secondary-color);
+    word-wrap: break-word;
+    line-height: 1.5rem;
+    text-align:start;
+    margin: 20px 10px;
+}
+.card .card_body p .fa-quote-left{
+    font-size: 3rem;
+    width: 100%;
+    transform: rotate(5deg);
+    margin: 20px 0;
+    color: rgba(0,0,0,0.3);
+}
+.card .card_body .contacts{
+    margin-left: 10px;
+    padding: 5px;
+}
+.card .card_body .contacts:hover a{
+    color: var(--main-color);
+}
+.card .card_body .contacts a{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
