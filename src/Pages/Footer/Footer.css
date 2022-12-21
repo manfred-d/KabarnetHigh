@@ -153,28 +153,31 @@ footer .footer-part .follow-us .links a i:hover {
 footer .footer-part .newsletter p{
     margin: 1rem 0;
 }
-footer .footer-part .newsletter .input-group{
-    /* min-width: 250px;
-    width: 100%; */
-    display: flex;
-    align-items: stretch;
-    flex-wrap: wrap;
+footer .footer-part .newsletter form{
+    max-width: 320px;
+    width: 100%;
     position: relative;
 }
-footer .footer-part .newsletter .input-group .form-control{
+footer .footer-part .newsletter form .form-control{
     background: rgba(255, 255, 255, 0.2);
     border-radius: 5px 0 0 5px;
     border: 0;
     font-size: 16px;
     color: var(--primary-color);
-    
+    width: 75%;
 }
-footer .footer-part .newsletter .input-group .input-group-append .btn-append{
-    background-color: var(--green);
+footer .footer-part .newsletter form .btn-append{
+    background-color: var(--secondary-color);
     display: inline-block;
+    border-radius: 0 5px 5px 0;
     border: 0;
     padding: 0 .8rem;
     color: var(--sun-yellow);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 25%;
     
 }
 footer .copyright {

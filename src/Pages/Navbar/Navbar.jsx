@@ -1,9 +1,74 @@
-import React from 'react';
+
+import React,{useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import './Navbar.css'
 // import { Link } from 'react';
 
 function Navbar() {
+
+  const [showNavbar, setshowNavbar] = useState(false);
+
+  
+  function handleOnClick() {
+    // document.querySelector(".nav-menu").classList.toggle("active");
+    setshowNavbar(!showNavbar);
+    document.querySelector("body").classList.toggle("active");
+  }
+  // remove body active class of large screen
+  // if (window.screen.width > 991) {
+  //   const body = document.querySelector("body");
+  //   if (body.classList.contains('active')) {
+  //     body.classList.remove('active');
+  //   }
+  // }
+  
+  // function navitems(){
+    
+  //   const navlinks = document.querySelectorAll(".nav-link").forEach(dropdownfn);
+
+  //   function dropdownfn(dropDown) {
+  //     console.log(dropDown.classList.contains('nav-link') === true);
+  //   }
+  //   console.log(navlinks);
+     
+  //   };
+  useEffect(() => {
+    navitems();
+  });
+  function navitems(){
+    const navlinks = document.querySelectorAll(".menu-item");
+    const links = document.querySelectorAll(".dropdown-item");
+    const linksArray = Array.from(navlinks);
+
+    linksArray.forEach(button =>{
+      button.addEventListener('click',(e) =>{
+        if(!button.classList.contains('dropdown')){
+          CloseAnotherBtn(button);
+          button.classList.toggle("active");
+          handleOnClick();          
+        }
+        else{
+          button.classList.toggle("active");
+          CloseAnotherBtn(button);
+          links.forEach((link) => {            
+            link.addEventListener("click", () => {
+              handleOnClick();
+            });
+          });
+        }
+      });
+    });
+    function CloseAnotherBtn(ActiveBtn){
+      linksArray.forEach(button =>{
+        if(button !== ActiveBtn){
+          if(button.classList.contains('active')){
+            button.classList.remove('active');
+          }
+        }
+      })
+    }
+  }
+  
   return (
     <>
       <header className="">
@@ -11,97 +76,143 @@ function Navbar() {
           <div className="logo">
             <a href="/">Kabarnet.</a>
           </div>
-          <div id="navbar" className="nav-menu">
-            <ul>
+          <div id="navbar" className={`nav-menu ${showNavbar && "active"}`}>
+            <ul id="nav-items" className="">
               <li className="menu-item active">
-                <Link to="/">Home</Link>
+                <Link to="/" className="nav-link">
+                  Home
+                </Link>
               </li>
-              <li className="menu-item">
-                <Link>
+              <li className="menu-item dropdown">
+                <Link className="nav-link ">
                   About Us <i className="fas fa-caret-down"></i>
                 </Link>
-                <ul className="sub-menu">
+                <ul className="sub-menu dropdown-menu">
                   <li>
-                    <Link to={"/about"}>About</Link>
+                    <Link to="/about" className="dropdown-item">
+                      About
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/history">History</Link>
+                    <Link to="/history" className="dropdown-item">
+                      History
+                    </Link>
                   </li>
                 </ul>
               </li>
-              <li className="menu-item">
-                <Link className="">
+
+              <li className="menu-item nav-item">
+                <Link className="nav-link dropdown">
                   Academics <i className="fas fa-caret-down"></i>
                 </Link>
-                <ul className="sub-menu">
+                <ul
+                  className="sub-menu dropdown-menu"
+                  aria-labelledby="dropdown02"
+                >
                   <li>
-                    <Link to="/performance">Performance</Link>
+                    <Link to="/performance" className="dropdown-item">
+                      Performance
+                    </Link>
                   </li>
                 </ul>
               </li>
-              <li className="menu-item">
-                <Link className="outer-shadow ">
+              <li className="menu-item nav-item">
+                <Link className="nav-link dropdown">
                   Departments <i className="fas fa-caret-down"></i>
                 </Link>
-                <ul className="sub-menu">
+                <ul className="sub-menu dropdown-menu">
                   <li>
-                    <Link to="/ict">ICT</Link>
+                    <Link to="/ict" className=" dropdown-item">
+                      ICT
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/math">Math Dept</Link>
+                    <Link to="/math" className="dropdown-item">
+                      Math Dept
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/english">English Dept</Link>
+                    <Link to="/english" className="dropdown-item">
+                      English Dept
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/science">Science Dept</Link>
+                    <Link to="/science" className="dropdown-item">
+                      Science Dept
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/sports">Sports</Link>
+                    <Link to="/sports" className="dropdown-item">
+                      Sports
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/boarding">Boarding Dept</Link>
+                    <Link to="/boarding" className="dropdown-item">
+                      Boarding Dept
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/guidingandcounseling">Quiding and Counseling</Link>
+                    <Link to="/guidingandcounseling" className="dropdown-item">
+                      Quiding and Counseling
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li className="menu-item nav-item">
+                <Link className="nav-link dropdown">
+                  Clubs & Societies <i className="fas fa-caret-down"></i>
+                </Link>
+                <ul className="sub-menu dropdown-menu">
+                  <li>
+                    <Link to="/cu" className="dropdown-item">
+                      C.U
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/ycs" className="dropdown-item">
+                      YCS
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/muslims" className="dropdown-item">
+                      Muslims
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/music" className="dropdown-item">
+                      Music
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li className="menu-item">
-                <Link to="/library" className="outer-shadow ">
+                <Link to="/library" className="nav-link">
                   Library
                 </Link>
               </li>
               <li className="menu-item">
-                <Link className="outer-shadow ">
-                  Clubs & Societies <i className="fas fa-caret-down"></i>
-                </Link>
-                <ul className="sub-menu">
-                  <li>
-                    <Link to="/cu">C.U</Link>
-                  </li>
-                  <li>
-                    <Link to="/ycs">YCS</Link>
-                  </li>
-                  <li>
-                    <Link to="/muslims">Muslims</Link>
-                  </li>
-                  <li>
-                    <Link to="/music">Music</Link>
-                  </li>
-                </ul>
-              </li>
-              <li className="menu-item">
-                <Link to="/contacts" className="outer-shadow ">
+                <Link to="/contacts" className="nav-link">
                   Contact Us
                 </Link>
               </li>
             </ul>
           </div>
+          {/* toggler */}
+          <button
+            type="button"
+            className="toggle_icon"
+            id="toggler"
+            onClick={handleOnClick}
+          >
+            {" "}
+            {/* */}
+            <span>Menu</span>
+          </button>
         </nav>
       </header>
     </>
   );
 }
 
-export default Navbar
+
+export default Navbar;
