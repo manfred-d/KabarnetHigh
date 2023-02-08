@@ -1,21 +1,8 @@
 import React from 'react';
-import GoogleMapReact from 'google-map-react';
+// import GoogleMapReact from 'google-map-react';
 import './Contact.css';
 
-const MapComponent = ({text}) =><div>{text}</div>;
-
-const handleApiLoaded = (map,maps)=>{
-}
-
-
 function Contact() {
-    const defaultProps = {
-      center: {
-        lat: 0.49311252379746934,
-        lng: 35.74721421532878,
-      },
-      zoom: 11,
-    };
   return (
     <div className=" mt-5 pt-5">
       <section className="contacts-page">
@@ -94,21 +81,7 @@ function Contact() {
         </div>
       </section>
       {/* 0.49311252379746934, 35.74721421532878 */}
-      <section className="maps">
-        <div className="container">
-          <div className="row">
-            <GoogleMapReact
-              bootstrapURLKeys={{ key: "" }}
-              defaultCenter={defaultProps.center}
-              defaultZoom={defaultProps.zoom}
-              yesIWantToUseGoogleMapApiInternals={true}
-              onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
-            >
-              <MapComponent lat={59.955413} lng={30.337844} text="My Marker" />
-            </GoogleMapReact>
-          </div>
-        </div>
-      </section>
+      <section className="maps"></section>
     </div>
   );
 }

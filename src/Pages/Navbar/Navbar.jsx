@@ -98,11 +98,16 @@ function Navbar() {
                       History
                     </Link>
                   </li>
+                  <li>
+                    <Link to="/gallery" className="dropdown-item">
+                      Gallery
+                    </Link>
+                  </li>
                 </ul>
               </li>
 
-              <li className="menu-item nav-item">
-                <Link className="nav-link dropdown">
+              <li className="menu-item dropdown">
+                <Link className="nav-link">
                   Academics <i className="fas fa-caret-down"></i>
                 </Link>
                 <ul
@@ -116,8 +121,8 @@ function Navbar() {
                   </li>
                 </ul>
               </li>
-              <li className="menu-item nav-item">
-                <Link className="nav-link dropdown">
+              <li className="menu-item dropdown">
+                <Link className="nav-link ">
                   Departments <i className="fas fa-caret-down"></i>
                 </Link>
                 <ul className="sub-menu dropdown-menu">
@@ -158,8 +163,8 @@ function Navbar() {
                   </li>
                 </ul>
               </li>
-              <li className="menu-item nav-item">
-                <Link className="nav-link dropdown">
+              <li className="menu-item dropdown">
+                <Link className="nav-link">
                   Clubs & Societies <i className="fas fa-caret-down"></i>
                 </Link>
                 <ul className="sub-menu dropdown-menu">

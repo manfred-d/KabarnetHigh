@@ -66,7 +66,7 @@ function Home() {
                 />
               </SplideSlide>
               <SplideSlide className="swiper-slide">
-                <h2>Students playing chessl</h2>
+                <h2>Students playing chess</h2>
                 <img
                   src="/assets/images/kabarnet4.jpeg"
                   alt="kabarnet Dinning Hall"
@@ -239,7 +239,8 @@ function Home() {
                 <h5>Message from the Principal</h5>
                 <code>Mr. Tarus</code>
                 <p>
-                  <i className='fas fa-quote-left'></i><br></br>
+                  <i className="fas fa-quote-left"></i>
+                  <br></br>
                   The school has three basketball courts, two football pitches,
                   two hockey pitches, a swimming pool, a handball field,
                   an athletics track and a table tennis table.

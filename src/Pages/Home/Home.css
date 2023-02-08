@@ -24,6 +24,7 @@ section .swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
+    overflow-y: hidden;
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -45,7 +46,7 @@ section .swiper-slide {
 
 section .swiper-slide h2 {
     position: absolute;
-    bottom: 20%;
+    bottom: -10%;
     left: 10%;
     font-size: 2.3rem;
     padding: 10px 0;
@@ -53,6 +54,21 @@ section .swiper-slide h2 {
     color: var(--primary-color);
     letter-spacing: 2px;
     text-transform: capitalize;
+    transition: all .5s;
+    animation-name: slideUp;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+    /* animation: slideUp .2s 3s linear; */
+}
+@keyframes slideUp {
+    from{
+       bottom: -10%;
+    }
+    to{
+        bottom: 15%;
+    }
+    
 }
 
 section .swiper-slide .history {

@@ -62,6 +62,32 @@ function Performance() {
           </div>
         </div>
       </section>
+      <section className="results mt-5 d-flex w-100 justify-content-center align-items-center flex-column">
+        <div className="container ">
+          <div className="row w-100 text-black-50 text-capitalize font-weight-bold">
+            KCSE Results
+          </div>
+          <div className="row ">
+            {/* cards start */}
+            <div
+              className="card shadow-lg border w-100 position-relative"
+              style={{ maxHeight: "400px", width: "100%" }}
+            >
+              <img
+                src="/assets/images/gallery/results_2022.jpg"
+                alt="kabarnet_high"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  objectFit: "fill",
+                  objectPosition: "center",
+                }}
+              />
+            </div>
+            {/* cards end */}
+          </div>
+        </div>
+      </section>
     </>
   );
 }
