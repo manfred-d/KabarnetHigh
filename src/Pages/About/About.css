@@ -1,6 +1,6 @@
 .about{
     padding: 180px 0 0;
-    background: linear-gradient(to bottom left, rgba(60, 229, 60, 0.907),rgba(218, 201, 22, 0.902));
+    background: linear-gradient(to bottom left, rgba(82, 82, 82, 0.907),rgba(56, 54, 40, 0.902));
 }
 .first-part{
     text-align: start;
@@ -69,6 +69,8 @@
     font-weight: 600;
     color: var(--primary-color);
     text-transform: capitalize;
+    margin: 0 10px;
+    padding-bottom: 10px;
 
 }
 .more_about .more_about_info .col-sm-12 .text{
@@ -79,6 +81,7 @@
     word-break: keep-all;
     word-spacing: 2px;
     line-height: 2rem;
+    padding: 15px 10px;
 }
 
 /* gallery section */

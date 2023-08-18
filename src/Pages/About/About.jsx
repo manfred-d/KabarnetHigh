@@ -15,19 +15,13 @@ function About() {
               </div>
               <div className="body">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Architecto recusandae dolor tenetur cum,<br></br> porro
-                  voluptatem quasi quos rerum corrupti modi obcaecati natus
-                  quidem minus esse quam vitae odio debitis reprehenderit minima
-                  sit vel voluptate iste?<br></br> Necessitatibus repudiandae
-                  incidunt, minima veritatis a quo recusandae dolores quam
-                  dolorem beatae nostrum rem ad.
+                  <strong>Baringo, Kenya:</strong> Christened ‘School of
+                  Excellence’ Boys High School by current and old boys,
+                  Government African Schools Kabarnet Boys in Baringo County has
+                  over the years lived up to its slogan by maintaining its
+                  position as the best public school in the county.
                 </p>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos
-                  nihil debitis nemo totam consequuntur accusamus beatae nobis
-                  nesciunt obcaecati sunt.
-                </p>
+                <p></p>
               </div>
             </div>
             <div className="sec-part col-sm-10 col-lg-7">
@@ -55,9 +49,7 @@ function About() {
                   <h4>Motto</h4>
                 </div>
                 <div className="motto_body text">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Perferendis est ut, ad explicabo labore doloribus dolore illo
-                  perspiciatis facere quidem.
+                  Centre for Academic excellence
                 </div>
               </div>
               {/* mission */}
@@ -66,9 +58,7 @@ function About() {
                   <h4>Mission</h4>
                 </div>
                 <div className="mission_body text">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Perferendis est ut, ad explicabo labore doloribus dolore illo
-                  perspiciatis facere quidem.
+                  To be the best teaching and training school
                 </div>
               </div>
               {/* vision */}
@@ -77,9 +67,7 @@ function About() {
                   <h4>Vision</h4>
                 </div>
                 <div className="vision_body text">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Perferendis est ut, ad explicabo labore doloribus dolore illo
-                  perspiciatis facere quidem.
+                  Strong to Excell.Strong to Excell.
                 </div>
               </div>
             </div>
